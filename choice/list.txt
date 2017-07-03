@@ -1,0 +1,16 @@
+hello.py
+choice\choice.py
+choice\dicts.py
+choice\error.txt
+choice\eval.py
+choice\list.txt
+choice\loop.py
+choice\msq.py
+choice\msq.pyc
+choice\rwrite.py
+choice\test.py
+choice\test.txt
+choice\tuples.py
+choice\walk.py
+choice\mypak\msq.py
+choice\mypak\__init__.py
