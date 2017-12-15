@@ -8,7 +8,11 @@ from instructors.models import Instructor
 
 
 def hello(request):
-    return render(request, "index.html")
+    context = {'var1' : "Hello world!"}        
+    context['var2'] =  'Hello python'
+    context['var3'] =  ['a','b','c']           
+    
+    return render(request, "index.html", context)
 
 def instructors_list(request):
     instructors = Instructor.objects.all()

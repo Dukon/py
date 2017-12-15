@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+
 
 # Create your models here.
 
@@ -28,6 +30,8 @@ class Instructor(models.Model):
     is_active = models.BooleanField(default=True)
     
     position = models.ForeignKey(Position)
+    
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, null=True)
     
     def __str__(self):
         return self.name

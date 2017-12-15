@@ -53,12 +53,20 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
+	<h1>Новый курс</h1>
+	<h2>{{var1|upper}} {{var2|lower}}</h2>
+	<h2>{{var3}} - {{var3.0}}</h2>
+	
       <div class="container">
         <h1 class="display-3">Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational 
+		
+        <p>
+		{% filter lower %}
+		This is a template for a simple marketing or informational 
 website. It includes a large callout called a jumbotron and three 
 supporting pieces of content. Use it as a starting point to create 
-something more unique.</p>
+something more unique.
+		{% endfilter %}</p>
         <p><a class="btn btn-primary btn-lg" href="#" role="button">больше »</a></p>
       </div>
     </div>
