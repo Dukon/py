@@ -15,15 +15,15 @@ def replace(file):
 			repl2.append(repls)
 	return repl2
 
-def generate_replace (file):
+def generate_replace (file,par1=3,par2=5,reg1=r'стр(?P<str>\d+)_Гр(?P<nm>\d+)',reg2=r'Стр(?P<str>\d+)_Гр(?P<nm>\d+)'):
 	repl2 = []
 	with open(file, "r", encoding='cp1251') as repl_file:
 		for text in repl_file:
 			repls = text.split(';')
-			#print(repls)
-			result1 = re.findall(r'стр(?P<str>\d+)_Гр(?P<nm>\d+)', repls[3])
-			result2 = re.findall(r'Стр(?P<str>\d+)_Гр(?P<nm>\d+)', repls[5])
-			#print (result1)
+			print(repls)
+			result1 = re.findall(reg1, repls[par1])
+			result2 = re.findall(reg2, repls[par2])
+			print (result1)
 			#print (result2)
 			if result2 != [] and result1 != []:
 				a, b = result1[0]
