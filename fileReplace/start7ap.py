@@ -8,4 +8,4 @@ from output_lib import *
 
 rep = generate_replace("7apk-xyz.csv",reg1=r'стр(?P<str>.+)_Гр(?P<nm>\d+)',reg2=r'Стр(?P<str>\d+)_Гр(?P<nm>\d+)')
 mass = read_file("Форма7АПК.np", rep, r1=0,r2=1,r3=2,r4=3)
-output("output/Форма7АПК_re.np", mass) # Имя файла выгрузки
+output("output/Форма17.np", mass) # Имя файла выгрузки
